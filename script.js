@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listeners for tracking button clicks
     addButtonTracking();
+
+    // Найти изображение в контейнере с классом click-me-image
+    const wpImage = document.querySelector('.click-me-image img');
+    
+    // Добавить обработчик события для этого изображения
+    if (wpImage) {
+        wpImage.addEventListener('contextmenu', function(event) {
+            this.src = 'images/wp_clickto.png';
+        });
+    }
 });
 
 /**
